@@ -1,0 +1,15 @@
+{
+  "name": "evart-network",
+  "description": "evart-network-engine",
+  "authors": [
+    "Mr.ArtemSky <mr.artemsky@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "bourbon": "^4.2.7",
+    "bootstrap-sass": "^3.3.7",
+    "AdminLTE": "admin-lte#^2.3.8"
+  }
+}

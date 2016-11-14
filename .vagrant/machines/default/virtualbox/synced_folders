@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/evart-nw-engine":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/evart-nw-engine","hostpath":"D:/Workspace/Projects/Laravel/evart-nw-engine","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"D:/Workspace/Projects/Laravel/evart-nw-engine","disabled":false,"__vagrantfile":true}}}

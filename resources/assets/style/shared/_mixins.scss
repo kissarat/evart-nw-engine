@@ -1,0 +1,7 @@
+@import "../../../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+@mixin sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
