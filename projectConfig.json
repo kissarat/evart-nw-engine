@@ -6,7 +6,10 @@
     "fonts": "public/assets/fonts/"
   },
   "src": {
-    "js": "resources/assets/js/main.js",
+    "js": [
+      "resources/assets/js/main.js",
+      "resources/assets/js/news.js"
+    ],
     "style": "resources/assets/style/main.scss",
     "img": "resources/assets/img/**/*.*",
     "fonts": "resources/assets/fonts/handle/**/*.*"

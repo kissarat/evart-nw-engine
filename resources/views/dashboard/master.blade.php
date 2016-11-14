@@ -56,7 +56,11 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    &nbsp;
+                    @if (!Auth::guest())
+                        <li><a href="{{route('dashboard.news.index')}}">News</a></li>
+                        <li><a href="#">Blog</a></li>
+                    @endif
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -94,7 +98,7 @@
 
 <!-- Application -->
 <script src="{{asset('assets/js/main.js')}}"></script>
-
+    @yield('scripts')
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -106,3 +110,5 @@
 </script>
 </body>
 </html>
+
+

@@ -5,3 +5,8 @@
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "shared/mixins";
 @import "shared/typography";
+@import "../../../bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css";
+
+.bootstrap-tagsinput{
+  width: 100%;
+}
