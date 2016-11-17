@@ -15,8 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
+
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
@@ -29,5 +32,14 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
         Route::get('/update/{id}', 'Dashboard\NewsController@getUpdate')->name('dashboard.news.update');
         Route::post('/update', 'Dashboard\NewsController@postUpdate')->name('dashboard.news.update');
         Route::post('/delete', 'Dashboard\NewsController@delete')->name('dashboard.news.delete');
+    });
+
+    Route::group(['prefix' => 'publications'], function () {
+        Route::get('/', 'Dashboard\PublicationsController@index')->name('dashboard.publications.index');
+        Route::get('/create', 'Dashboard\PublicationsController@getCreate')->name('dashboard.publications.create');
+        Route::post('/create', 'Dashboard\PublicationsController@postCreate')->name('dashboard.publications.create');
+        Route::get('/update/{id}', 'Dashboard\PublicationsController@getUpdate')->name('dashboard.publications.update');
+        Route::post('/update', 'Dashboard\PublicationsController@postUpdate')->name('dashboard.publications.update');
+        Route::post('/delete', 'Dashboard\PublicationsController@delete')->name('dashboard.publications.delete');
     });
 });

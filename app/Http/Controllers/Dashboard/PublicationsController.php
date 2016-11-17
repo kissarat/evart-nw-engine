@@ -2,25 +2,24 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Dashboard\News;
+use App\Dashboard\Publication;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-
-class NewsController extends Controller
+class PublicationsController extends Controller
 {
     private function bold($text){
         return '<strong>' . $text .'</strong>';
     }
     public function index()
     {
-        return view('dashboard.news.index')->with(['News' => News::paginate(5)]);
+        return view('dashboard.publications.index')->with(['News' => Publication::paginate(5)]);
     }
 
 
     public function getCreate()
     {
-        return view('dashboard.news.create');
+        return view('dashboard.publications.create');
     }
 
     public function postCreate(Request $request)
@@ -31,22 +30,20 @@ class NewsController extends Controller
         ]);
 
 
-        $article = new News();
+        $article = new Publication();
         $article->title = $request['title'];
         $article->keywords = $request['tags'];
         $article->article_ru = $request['article_ru'];
         $article->article_en = $request['article_en'];
-        $article->article_en = $request['article_en'];
 
         $imageName = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(storage_path('app/public/news'), $imageName);
-        $article->image_path = '/storage/news/' . $imageName;
-
+        $request->image->move(storage_path('app/public/publications'), $imageName);
+        $article->image_path = '/storage/publications/' . $imageName;
 
         $article->save();
 
 
-        return redirect()->route('dashboard.news.index')->with([
+        return redirect()->route('dashboard.publications.index')->with([
             'status' => 'success',
             'msg' => $this->bold($article->title) . ' has been created'
         ]);
@@ -54,10 +51,10 @@ class NewsController extends Controller
 
     public function getUpdate($article_id)
     {
-        $article = News::find($article_id);
+        $article = Publication::find($article_id);
         if(!$article)
             return view('errors.404');
-        return view('dashboard.news.create')->with(['Item' => $article]);
+        return view('dashboard.publications.create')->with(['Item' => $article]);
     }
 
     public function postUpdate(Request $request)
@@ -68,18 +65,18 @@ class NewsController extends Controller
         ]);
 
 
-        $article = News::find($request['id']);
+        $article = Publication::find($request['id']);
         $article->title = $request['title'];
         $article->keywords = $request['tags'];
         $article->article_ru = $request['article_ru'];
         $article->article_en = $request['article_en'];
 
-        $request->image->move(storage_path('app/public/news'), basename($article->image_path));
+        $request->image->move(storage_path('app/public/publications'), basename($article->image_path));
 
         $article->save();
 
 
-        return redirect()->route('dashboard.news.index')->with([
+        return redirect()->route('dashboard.publications.index')->with([
             'status' => 'info',
             'msg' => $this->bold($article->title) . ' has been updated'
         ]);
@@ -92,7 +89,7 @@ class NewsController extends Controller
             'id' => 'required|exists:news'
         ]);
 
-        $article = News::find($request['id']);
+        $article = Publication::find($request['id']);
         $title = $article->title;
         $status = 'warning';
 
@@ -100,7 +97,7 @@ class NewsController extends Controller
             $status = 'danger';
         }
 
-        return redirect()->route('dashboard.news.index')->with([
+        return redirect()->route('dashboard.publications.index')->with([
             'status' => $status,
             'msg' => $this->bold($title) . ' has been deleted'
         ]);

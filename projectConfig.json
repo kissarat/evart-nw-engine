@@ -8,7 +8,7 @@
   "src": {
     "js": [
       "resources/assets/js/main.js",
-      "resources/assets/js/news.js"
+      "resources/assets/js/publications.js"
     ],
     "style": "resources/assets/style/main.scss",
     "img": "resources/assets/img/**/*.*",

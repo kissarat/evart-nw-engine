@@ -703,4 +703,16 @@ $(function(){
 
         language_url : '/assets/editor/tinymce/langs/ru.js'
     });
+
+    $("#image").change(function(){
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#imagePreviewSrc').attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(this.files[0]);
+        }
+    }).trigger('change');
 });

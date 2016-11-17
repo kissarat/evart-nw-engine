@@ -58,7 +58,7 @@
                 <ul class="nav navbar-nav">
                     @if (!Auth::guest())
                         <li><a href="{{route('dashboard.news.index')}}">News</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="{{route('dashboard.publications.index')}}">Publications</a></li>
                     @endif
 
                 </ul>
