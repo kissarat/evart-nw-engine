@@ -16,30 +16,41 @@ Route::get('/', function () {
 });
 
 
+Route::group(['prefix' => 'auth'], function () {
+    Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+    Route::post('/login', 'Auth\LoginController@login');
+    Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+});
 
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth', 'namespace' => 'Dashboard'], function () {
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function () {
-    Route::get('/', 'HomeController@index')->name('dashboard.index');
+    Route::get('/', 'DashboardController@index')->name('dashboard.index');
 
     Route::group(['prefix' => 'news'], function () {
-        Route::get('/', 'Dashboard\NewsController@index')->name('dashboard.news.index');
-        Route::get('/create', 'Dashboard\NewsController@getCreate')->name('dashboard.news.create');
-        Route::post('/create', 'Dashboard\NewsController@postCreate')->name('dashboard.news.create');
-        Route::get('/update/{id}', 'Dashboard\NewsController@getUpdate')->name('dashboard.news.update');
-        Route::post('/update', 'Dashboard\NewsController@postUpdate')->name('dashboard.news.update');
-        Route::post('/delete', 'Dashboard\NewsController@delete')->name('dashboard.news.delete');
+        Route::get('/', 'NewsController@index')->name('dashboard.news.index');
+        Route::get('/create', 'NewsController@getCreate')->name('dashboard.news.create');
+        Route::post('/create', 'NewsController@postCreate')->name('dashboard.news.create');
+        Route::get('/update/{id}', 'NewsController@getUpdate')->name('dashboard.news.update');
+        Route::post('/update', 'NewsController@postUpdate')->name('dashboard.news.update');
+        Route::post('/delete', 'NewsController@delete')->name('dashboard.news.delete');
     });
 
     Route::group(['prefix' => 'publications'], function () {
-        Route::get('/', 'Dashboard\PublicationsController@index')->name('dashboard.publications.index');
-        Route::get('/create', 'Dashboard\PublicationsController@getCreate')->name('dashboard.publications.create');
-        Route::post('/create', 'Dashboard\PublicationsController@postCreate')->name('dashboard.publications.create');
-        Route::get('/update/{id}', 'Dashboard\PublicationsController@getUpdate')->name('dashboard.publications.update');
-        Route::post('/update', 'Dashboard\PublicationsController@postUpdate')->name('dashboard.publications.update');
-        Route::post('/delete', 'Dashboard\PublicationsController@delete')->name('dashboard.publications.delete');
+        Route::get('/', 'PublicationsController@index')->name('dashboard.publications.index');
+        Route::get('/create', 'PublicationsController@getCreate')->name('dashboard.publications.create');
+        Route::post('/create', 'PublicationsController@postCreate')->name('dashboard.publications.create');
+        Route::get('/update/{id}', 'PublicationsController@getUpdate')->name('dashboard.publications.update');
+        Route::post('/update', 'PublicationsController@postUpdate')->name('dashboard.publications.update');
+        Route::post('/delete', 'PublicationsController@delete')->name('dashboard.publications.delete');
     });
+});
+
+/* Public */
+
+
+
+Route::group(['namespace' => 'Front'], function () {
+    Route::get('/', 'FrontController@index')->name('front.index');
+
 });
