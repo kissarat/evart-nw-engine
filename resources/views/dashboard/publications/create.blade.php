@@ -1,2 +1,2 @@
 @php($type = 'publications')
-@include('dashboard.layout.create')
+@include('dashboard.layout.publications.create')

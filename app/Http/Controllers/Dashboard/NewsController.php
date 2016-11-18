@@ -14,7 +14,7 @@ class NewsController extends Controller
     }
     public function index()
     {
-        return view('dashboard.news.index')->with(['News' => News::paginate(5)]);
+        return view('dashboard.news.index')->with(['Publications' => News::paginate(5)]);
     }
 
 

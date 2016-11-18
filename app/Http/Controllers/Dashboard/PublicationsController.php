@@ -13,7 +13,7 @@ class PublicationsController extends Controller
     }
     public function index()
     {
-        return view('dashboard.publications.index')->with(['News' => Publication::paginate(5)]);
+        return view('dashboard.publications.index')->with(['Publications' => Publication::paginate(5)]);
     }
 
 
