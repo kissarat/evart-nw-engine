@@ -2,7 +2,7 @@
 if (session_id() == '') session_start();
 
 mb_internal_encoding('UTF-8');
-date_default_timezone_set('Europe/Rome');
+date_default_timezone_set('Europe/Kiev');
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ $config = array(
 	| with start and final /
 	|
 	*/
-	'upload_dir' => '/storage/news/source/',
+	'upload_dir' => '/storage/source/',
 	/*
 	|--------------------------------------------------------------------------
 	| relative path from filemanager folder to upload folder
@@ -77,7 +77,7 @@ $config = array(
 	| with final /
 	|
 	*/
-	'current_path' => '../../../storage/news/source/',
+	'current_path' => '../../../storage/source/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -88,7 +88,7 @@ $config = array(
 	| DO NOT put inside upload folder
 	|
 	*/
-	'thumbs_base_path' => '../../../storage/news/thumbs/',
+	'thumbs_base_path' => '../../../storage/thumbs/',
 
 
 	/*
