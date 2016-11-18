@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Dashboard\News;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 
 class NewsController extends Controller
@@ -94,10 +95,13 @@ class NewsController extends Controller
 
         $article = News::find($request['id']);
         $title = $article->title;
+        $image = basename($article->image_path);
         $status = 'warning';
 
         if(!$article->delete()){
             $status = 'danger';
+        }else{
+            Storage::delete('public/news/' . $image);
         }
 
         return redirect()->route('dashboard.news.index')->with([

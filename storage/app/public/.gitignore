@@ -1,5 +1,6 @@
 *
 !/news
+!/publications
 !/news/source
 !/news/thumbs
 !.gitignore

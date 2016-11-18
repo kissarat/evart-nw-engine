@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Dashboard\Publication;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class PublicationsController extends Controller
 {
@@ -86,15 +87,18 @@ class PublicationsController extends Controller
     {
 
         $this->validate($request, [
-            'id' => 'required|exists:news'
+            'id' => 'required|exists:publications'
         ]);
 
         $article = Publication::find($request['id']);
         $title = $article->title;
+        $image = basename($article->image_path);
         $status = 'warning';
 
         if(!$article->delete()){
             $status = 'danger';
+        }else{
+            Storage::delete('public/publications/' . $image);
         }
 
         return redirect()->route('dashboard.publications.index')->with([
