@@ -62,5 +62,6 @@ Route::group(['namespace' => 'Front', 'middleware' => 'lang.front'], function ()
     })->name('front.lang');
 
     Route::get('/', 'FrontController@index')->name('front.index');
+    Route::get('/news', 'FrontController@news')->name('front.news');
 
 });

@@ -57,8 +57,8 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     @if (!Auth::guest())
-                        <li><a href="{{route('dashboard.news.index')}}">News</a></li>
-                        <li><a href="{{route('dashboard.publications.index')}}">Publications</a></li>
+                        <li {{ Route::currentRouteNamed('dashboard.news.index') ? 'class=active' : '' }}><a href="{{route('dashboard.news.index')}}">News</a></li>
+                        <li {{ Route::currentRouteNamed('dashboard.publications.index') ? 'class=active' : '' }}><a href="{{route('dashboard.publications.index')}}">Publications</a></li>
                     @endif
 
                 </ul>

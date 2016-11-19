@@ -15,6 +15,7 @@ class CreatePublicationsTable extends Migration
     {
         Schema::create('publications', function (Blueprint $table) {
             $table->increments('id');
+            $table->enum('type', ['publication', 'news']);
             $table->boolean('published')->default(false);
             $table->string('image_path');
             $table->text('title');
