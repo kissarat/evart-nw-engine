@@ -11,11 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
     Route::post('/login', 'Auth\LoginController@login');
@@ -23,7 +18,13 @@ Route::group(['prefix' => 'auth'], function () {
 });
 
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth', 'namespace' => 'Dashboard'], function () {
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'lang.back'], 'namespace' => 'Dashboard'], function () {
+    Route::get('/lang/{locale}', function($locale){
+        return redirect()
+            ->back()
+            ->withInput()
+            ->withCookie('locale_back', $locale);
+    })->name('dashboard.lang');
 
     Route::get('/', 'DashboardController@index')->name('dashboard.index');
 
@@ -50,7 +51,14 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth', 'namespace' => 'D
 
 
 
-Route::group(['namespace' => 'Front'], function () {
+Route::group(['namespace' => 'Front', 'middleware' => 'lang.front'], function () {
+    Route::get('/lang/{locale}', function($locale){
+        return redirect()
+            ->back()
+            ->withInput()
+            ->withCookie('locale_front', $locale);
+    })->name('front.lang');
+
     Route::get('/', 'FrontController@index')->name('front.index');
 
 });

@@ -27,7 +27,7 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown-main">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Carrier at the Evart Network</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.Carrier')</a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
@@ -38,7 +38,7 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown-main">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">News</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.News')</a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
@@ -49,7 +49,7 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown-main">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About us</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.About')</a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
@@ -60,10 +60,12 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown-lang">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">en</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            {{ Cookie::get('locale_front') ?? 'en'}}
+                        </a>
                         <ul class="dropdown-menu dropdown-menu-left wow fadeInRight" data-wow-duration="400ms" data-wow-delay="0ms">
-                            <li><a href="#"><abbr>en</abbr><i class="lang lang-en"></i> English</a></li>
-                            <li><a href="#"><abbr>ru</abbr><i class="lang lang-ru"></i> Русский</a></li>
+                            <li><a href="/lang/en"><abbr>en</abbr><i class="lang lang-en"></i> English</a></li>
+                            <li><a href="/lang/ru"><abbr>ru</abbr><i class="lang lang-ru"></i> Русский</a></li>
                             <li><a href="#"><abbr>zh</abbr><i class="lang lang-zh"></i> China</a></li>
                             <li><a href="#"><abbr>de</abbr><i class="lang lang-de"></i> Deutsch</a></li>
                             <li><a href="#"><abbr>fr</abbr><i class="lang lang-fr"></i> Français</a></li>
@@ -78,7 +80,7 @@
                             <li><a href="#"><abbr>kg</abbr><i class="lang lang-kg"></i> Кыргызча</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="btn"><i class="ico ico-user"></i>Sign Up</a></li>
+                    <li><a href="#" class="btn"><i class="ico ico-user"></i>@lang('front/navigation.Signin')</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
