@@ -10,7 +10,7 @@
       "resources/assets/js/main.js",
       "resources/assets/js/publications.js"
     ],
-    "style": "resources/assets/style/main.scss",
+    "style": ["resources/assets/style/main.scss", "resources/assets/style/editor.scss"],
     "img": "resources/assets/img/**/*.*",
     "fonts": "resources/assets/fonts/handle/**/*.*"
   },

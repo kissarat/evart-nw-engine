@@ -7,12 +7,12 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "tinymce": "^4.4.3"
+    "tinymce": "^4.4.3",
+    "ekko-lightbox": "4.0.2"
   },
   "devDependencies": {
     "bourbon": "^4.2.7",
     "bootstrap-sass": "^3.3.7",
-    "AdminLTE": "admin-lte#^2.3.8",
     "bootstrap-tagsinput": "bootstraptagsinput#^0.8.0"
   }
 }

@@ -74,6 +74,12 @@
 	background: transparent no-repeat url(data:image/gif;base64,R0lGODlhPgAKAIABALu7u////yH5BAEAAAEALAAAAAA+AAoAAAJPjI+py+0Knpz0xQDyuUhvfoGgIX5iSKZYgq5uNL5q69asZ8s5rrf0yZmpNkJZzFesBTu8TOlDVAabUyatguVhWduud3EyiUk45xhTTgMBBQA7);
 }
 
+.mce-visualblocks cite {
+	padding-top: 10px;
+	border: 1px dashed #BBB;
+	background: transparent no-repeat url(data:image/gif;base64,R0lGODlhGAAKAIABALu7uwAAACH5BAEAAAEALAAAAAAYAAoAAAIjjI+pBuveWAwR2GNnZbzTN3lapmyf+FAahpBemoYwhF3SiBcAOw==);
+}
+
 .mce-visualblocks address {
 	padding-top: 10px;
 	border: 1px dashed #BBB;

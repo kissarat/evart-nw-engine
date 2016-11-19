@@ -105,9 +105,20 @@ class PublicationsController extends Controller
             'status' => $status,
             'msg' => $this->bold($title) . ' has been deleted'
         ]);
+    }
 
+    public function publish(Request $request){
+        $this->validate($request, [
+            'id' => 'required|exists:news'
+        ]);
 
+        $article = Publication::find($request['id']);
+        $article->published = !$article->published;
+        $article->save();
 
-
+        return redirect()->route('dashboard.news.index')->with([
+            'status' => 'info',
+            'msg' => $this->bold($article->title) . ' has been ' . $article->published ? 'published' : 'unpublished'
+        ]);
     }
 }

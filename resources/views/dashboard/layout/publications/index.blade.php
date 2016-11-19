@@ -19,8 +19,8 @@
                             @foreach($Publications as $publication)
                                 <div class="media">
                                     <div class="media-left">
-                                        <a href="#">
-                                            <img class="media-object" src="" alt="">
+                                        <a href="{{$publication['image_path']}}" data-toggle="lightbox">
+                                            <img class="img-fluid" src="{{$publication['image_path']}}" alt="">
                                         </a>
                                     </div>
                                     <div class="media-body">
@@ -28,7 +28,16 @@
                                         {!! mb_strimwidth(strip_tags($publication['article_ru']), 0, 97, '...') !!}
 
                                     </div>
-                                    <div class="media-right"> <a href="#"> <a href="{{route('dashboard.'. $type .'.update')}}/{{$publication['id']}}" class="btn btn-info">Edit</a></a> </div>
+                                    <div class="media-right">
+                                        <a href="{{route('dashboard.'. $type .'.update')}}/{{$publication['id']}}" class="btn btn-info">
+                                            Edit
+                                        </a>
+                                        <form action="{{route('dashboard.'. $type .'.publish')}}" method="post">
+                                            <input type="hidden" name="id" value="{{$publication['id']}}">
+                                            {{csrf_field()}}
+                                            <button type="submit" class="btn btn-info">{{$publication['published'] ? 'Unpublish' : 'Publish'}}</button>
+                                        </form>
+                                    </div>
                                 </div>
                             @endforeach
 

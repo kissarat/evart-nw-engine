@@ -35,6 +35,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'lang.back'], 'n
         Route::get('/update/{id}', 'NewsController@getUpdate')->name('dashboard.news.update');
         Route::post('/update', 'NewsController@postUpdate')->name('dashboard.news.update');
         Route::post('/delete', 'NewsController@delete')->name('dashboard.news.delete');
+        Route::post('/publish', 'NewsController@publish')->name('dashboard.news.publish');
     });
 
     Route::group(['prefix' => 'publications'], function () {
@@ -44,6 +45,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth', 'lang.back'], 'n
         Route::get('/update/{id}', 'PublicationsController@getUpdate')->name('dashboard.publications.update');
         Route::post('/update', 'PublicationsController@postUpdate')->name('dashboard.publications.update');
         Route::post('/delete', 'PublicationsController@delete')->name('dashboard.publications.delete');
+        Route::post('/publish', 'PublicationsController@publish')->name('dashboard.publications.publish');
     });
 });
 
