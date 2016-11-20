@@ -7,12 +7,12 @@
             </header>
         </div>
         <div class="row">
-            <?php
+            @php
                 $lang = Cookie::get('locale_front') == 'ru' ? 'ru' : 'en';
                 $delay = 0;
                 $directions = ['fadeInLeftBig', 'fadeInDown', 'fadeInRightBig'];
                 $position = 0;
-            ?>
+            @endphp
             @foreach($Publications as $publication)
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <a href="#">

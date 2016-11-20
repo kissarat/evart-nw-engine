@@ -7,138 +7,24 @@
                 <a href="#">Find out more</a>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="case wow fadeInDown" data-wow-duration="400ms" data-wow-delay="100ms">
-                <div class="bg"></div>
-                <article>
-                    <header>
-                        <h1>Name</h1>
-                        <p>One bonus accrual after 3 month</p>
-                    </header>
-                    <footer>
-                        <ul>
-                            <li>125</li>
-                            <li>Evart Box</li>
-                            <li>234% ...</li>
-                        </ul>
-                    </footer>
-                    <span class="time"><strong>3</strong> Months</span>
-                </article>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="case wow fadeInDown" data-wow-duration="400ms" data-wow-delay="300ms">
-                <div class="bg"></div>
-                <article>
-                    <header>
-                        <h1>Name</h1>
-                        <p>One bonus accrual after 3 month</p>
-                    </header>
-                    <footer>
-                        <ul>
-                            <li>125</li>
-                            <li>Evart Box</li>
-                            <li>234% ...</li>
-                        </ul>
-                    </footer>
-                    <span class="time"><strong>3</strong> Months</span>
-                </article>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="case wow fadeInDown" data-wow-duration="400ms" data-wow-delay="500ms">
-                <div class="bg"></div>
-                <article>
-                    <header>
-                        <h1>Name</h1>
-                        <p>One bonus accrual after 3 month</p>
-                    </header>
-                    <footer>
-                        <ul>
-                            <li>125</li>
-                            <li>Evart Box</li>
-                            <li>234% ...</li>
-                        </ul>
-                    </footer>
-                    <span class="time"><strong>3</strong> Months</span>
-                </article>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="case wow fadeInDown" data-wow-duration="400ms" data-wow-delay="500ms">
-                <div class="bg"></div>
-                <article>
-                    <header>
-                        <h1>Name</h1>
-                        <p>One bonus accrual after 3 month</p>
-                    </header>
-                    <footer>
-                        <ul>
-                            <li>125</li>
-                            <li>Evart Box</li>
-                            <li>234% ...</li>
-                        </ul>
-                    </footer>
-                    <span class="time"><strong>3</strong> Months</span>
-                </article>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="case wow fadeInDown" data-wow-duration="400ms" data-wow-delay="700ms">
-                <div class="bg"></div>
-                <article>
-                    <header>
-                        <h1>Name</h1>
-                        <p>One bonus accrual after 3 month</p>
-                    </header>
-                    <footer>
-                        <ul>
-                            <li>125</li>
-                            <li>Evart Box</li>
-                            <li>234% ...</li>
-                        </ul>
-                    </footer>
-                    <span class="time"><strong>3</strong> Months</span>
-                </article>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="case wow fadeInDown" data-wow-duration="400ms" data-wow-delay="900ms">
-                <div class="bg"></div>
-                <article>
-                    <header>
-                        <h1>Name</h1>
-                        <p>One bonus accrual after 3 month</p>
-                    </header>
-                    <footer>
-                        <ul>
-                            <li>125</li>
-                            <li>Evart Box</li>
-                            <li>234% ...</li>
-                        </ul>
-                    </footer>
-                    <span class="time"><strong>3</strong> Months</span>
-                </article>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="case wow fadeInDown" data-wow-duration="400ms" data-wow-delay="1100ms">
-                <div class="bg"></div>
-                <article>
-                    <header>
-                        <h1>Name</h1>
-                        <p>One bonus accrual after 3 month</p>
-                    </header>
-                    <footer>
-                        <ul>
-                            <li>125</li>
-                            <li>Evart Box</li>
-                            <li>234% ...</li>
-                        </ul>
-                    </footer>
-                    <span class="time"><strong>3</strong> Months</span>
-                </article>
-            </div>
-        </div>
+        @php
+            $cases = collect([
+                createCase('Econom', 90, ["office", 'count:176']),
+                createCase('Short', 900, ["box", "tv:0", 'count:12']),
+                createCase('Start', 750, ["box", "tv:1", 'count:122']),
+                createCase('Smart', 1500, ["box", "tv:2", 'count:47']),
+                createCase('Business', 4500, ["box", "tv:3", 'count:45']),
+                createCase('Premium ', 9000, ["box", "tv:5", 'count:29']),
+                createCase('VIP', 21000, ["box", "tv:6", 'count:12']),
+                createCase('Pragmatic ', 500 , ["box", "tv:1", 'count:200']),
+                createCase('Priority', 1000, ["box", "tv:1", 'count:100']),
+            ]);
+        @endphp
+
+        @each('public.indexPartials.case', $cases, 'case')
+
+
+
+
     </div>
 </section>
