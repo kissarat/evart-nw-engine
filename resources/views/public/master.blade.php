@@ -11,16 +11,13 @@
     <title>{{ config('app.name', 'Evart Network') }}</title>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" href="favicon16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="favicon32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="favicon64.png" sizes="64x64" type="image/png">
-    <link rel="icon" href="favicon96.png" sizes="96x96" type="image/png">
-    <link rel="icon" href="favicon128.png" sizes="128x128" type="image/png">
-    <link rel="icon" href="favicon512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <!-- Main -->
-    <link rel="stylesheet" href="assets_front/css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="/assets_front/css/main.css" type="text/css"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +42,7 @@
 @include('public.shared.footer')
 
 <!-- Application -->
-<script src="assets_front/js/main.js"></script>
+<script src="/assets_front/js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

@@ -10,16 +10,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Title & Description -->
     <meta name="description" content="">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Evart Network - Dashboard') }}</title>
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" href="favicon16.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="favicon32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="favicon64.png" sizes="64x64" type="image/png">
-    <link rel="icon" href="favicon96.png" sizes="96x96" type="image/png">
-    <link rel="icon" href="favicon128.png" sizes="128x128" type="image/png">
-    <link rel="icon" href="favicon512.png" sizes="512x512" type="image/png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <!-- Main -->
     <link rel="stylesheet" href="{{asset('assets/css/main.css')}}" type="text/css"/>

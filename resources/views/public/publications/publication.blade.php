@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="col-md-offset-2 col-md-8">
                         <figure>
-                            <img src="assets_front/img/slider/1.jpg" alt="">
+                            <img src="/assets_front/img/slider/1.jpg" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet.</p>
                                 <p>Imsge source</p>
@@ -66,7 +66,7 @@
 
                             Think about it – on the surface level, the hamburger menu icon is simple and clear. Just like someone’s cupboards in a nicely designed home kitchen. But once you open up that fly-out menu (or take a poke around the nether realms of anyone’s tupperware cupboard…you know the one) the mirage of pristine order and arrangement can very quickly come undone.</p>
                         <figure>
-                            <img src="assets_front/img/slider/1.jpg" alt="">
+                            <img src="/assets_front/img/slider/1.jpg" alt="">
                             <figcaption>
                                 <p>Lorem ipsum dolor sit amet.</p>
                             </figcaption>
@@ -106,7 +106,7 @@
                 <div class="navbar" role="navigation">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="/"><img src="assets_front/img/logo.png" alt="Evart Network"></a>
+                        <a class="navbar-brand" href="/"><img src="/assets_front/img/logo.png" alt="Evart Network"></a>
                     </div>
                     <ul class="nav navbar-nav navbar-left breadcrumbs">
                         <li><a href="#">Evart Network</a></li>

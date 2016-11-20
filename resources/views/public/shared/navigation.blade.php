@@ -9,13 +9,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img src="assets_front/img/logo.png" alt="Evart Network"></a>
+                <a class="navbar-brand" href="/"><img src="/assets_front/img/logo.png" alt="Evart Network"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown dropdown-main active">
+                    <li class="dropdown dropdown-main">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Evart Network</a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li><a href="#">Link</a></li>
@@ -37,16 +37,8 @@
                             <li><a href="#">Link</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown dropdown-main">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.News')</a>
-                        <ul class="dropdown-menu dropdown-menu-left">
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                        </ul>
+                    <li {{ Route::currentRouteNamed('front.news') ? 'class=active' : '' }}>
+                        <a href="{{route('front.news')}}">@lang('front/navigation.News')</a>
                     </li>
                     <li class="dropdown dropdown-main">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.About')</a>

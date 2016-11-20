@@ -67,7 +67,7 @@ trait Publications{
     public function postUpdate(Request $request)
     {
         $this->validate($request, [
-            'id' => 'required|exists:news',
+            'id' => 'required|exists:publications',
             'title' => 'required'
         ]);
 
