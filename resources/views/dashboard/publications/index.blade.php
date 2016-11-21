@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">{{title_case($type)}}</div>
+                    <div class="panel-heading">{{title_case(trans_choice('dashboard.'.str_singular($type), 2))}}</div>
 
                     <div class="panel-body">
                         @if (session('status'))
@@ -13,7 +13,6 @@
                                 <p>{!! session('msg') !!}</p>
                             </div>
                         @endif
-                        @php($lang = Cookie::get('locale_back') == 'ru '? 'ru' : 'en')
                         @if(count($Publications) > 0)
                             @foreach($Publications as $publication)
                                 <div class="media">
@@ -23,29 +22,29 @@
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading">{{$publication['title']}}</h4>
-                                        {!! mb_strimwidth(strip_tags($publication['article_' . $lang]), 0, 97, '...') !!}
+                                        <h4 class="media-heading">{{$publication['title_' . getLangRU_EN('locale_back')]}}</h4>
+                                        {!! mb_strimwidth(strip_tags($publication['article_' . getLangRU_EN('locale_back')]), 0, 100, '...') !!}
 
                                     </div>
                                     <div class="media-right">
                                         <a href="{{route('dashboard.'. $type .'.update')}}/{{$publication['id']}}" class="btn btn-info">
-                                            Edit
+                                            @lang('dashboard.buttons.edit')
                                         </a>
                                         <form action="{{route('dashboard.'. $type .'.publish')}}" method="post">
                                             <input type="hidden" name="id" value="{{$publication['id']}}">
                                             {{csrf_field()}}
-                                            <button type="submit" class="btn btn-info">{{$publication['published'] ? 'Unpublish' : 'Publish'}}</button>
+                                            <button type="submit" class="btn btn-info">{{$publication['published'] ? trans('dashboard.buttons.unpublish') : trans('dashboard.buttons.publish')}}</button>
                                         </form>
                                     </div>
                                 </div>
                             @endforeach
 
                         @else
-                            <h2>Nothing to show.</h2>
+                            <h2>@lang('dashboard.noitems')</h2>
                         @endif
                     </div>
                     <div class="panel-footer">
-                        <a href="{{route('dashboard.'. $type .'.create')}}" class="btn btn-primary">Create new</a>
+                        <a href="{{route('dashboard.'. $type .'.create')}}" class="btn btn-primary">@lang('dashboard.buttons.new')</a>
                     </div>
                 </div>
             </div>

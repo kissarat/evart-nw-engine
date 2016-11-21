@@ -3,13 +3,9 @@ namespace App\Http\Controllers\Traits;
 
 use App\Dashboard\Publication;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use File;
 
 trait Publications{
-    private function bold($text){
-        return '<strong>' . $text .'</strong>';
-    }
-
     public function index()
     {
         return view('dashboard.publications.index')
@@ -27,18 +23,22 @@ trait Publications{
 
     public function postCreate(Request $request)
     {
+
         $this->validate($request, [
-            'title' => 'required',
+            'title_ru' => 'required',
+            'title_en' => 'required',
             'image' => 'required|image|mimes:jpeg,jpg|max:400'
         ]);
 
 
         $article = new Publication();
         $article->type = $this->type;
-        $article->title = $request['title'];
+        $article->title_ru = $request['title_ru'];
+        $article->title_en = $request['title_en'];
         $article->keywords = $request['tags'];
         $article->article_ru = $request['article_ru'];
         $article->article_en = $request['article_en'];
+        $article->posted_by = $request['user_id'];
 
         $imageName = time() . '.' . $request->image->getClientOriginalExtension();
         $request->image->move(storage_path('app/public/publications'), $imageName);
@@ -49,7 +49,7 @@ trait Publications{
 
         return redirect()->route('dashboard.' . str_plural($this->type) . '.index')->with([
             'status' => 'success',
-            'msg' => $this->bold($article->title) . ' has been created'
+            'msg' => html_strong($article['title_' . getLangRU_EN('locale_back')]) . ' ' . trans('dashboard.state.created')
         ]);
     }
 
@@ -68,25 +68,33 @@ trait Publications{
     {
         $this->validate($request, [
             'id' => 'required|exists:publications',
-            'title' => 'required'
+            'title_ru' => 'required',
+            'title_en' => 'required'
         ]);
 
 
         $article = Publication::find($request['id']);
-        $article->title = $request['title'];
+        $article->title_ru = $request['title_ru'];
+        $article->title_en = $request['title_en'];
         $article->keywords = $request['tags'];
         $article->article_ru = $request['article_ru'];
         $article->article_en = $request['article_en'];
 
-        if($request->image)
-            $request->image->move(storage_path('app/public/publications'), basename($article->image_path));
+
+
+        if($request->image){
+            File::delete(storage_path('app/public/publications/'.basename($article->image_path)));
+            $imageName = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(storage_path('app/public/publications'), $imageName);
+            $article->image_path = '/storage/publications/' . $imageName;
+        }
 
         $article->save();
 
 
         return redirect()->route('dashboard.' . str_plural($this->type)  . '.index')->with([
             'status' => 'info',
-            'msg' => $this->bold($article->title) . ' has been updated'
+            'msg' => html_strong($article['title_' . getLangRU_EN('locale_back')]) . ' ' . trans('dashboard.state.updated')
         ]);
     }
 
@@ -98,7 +106,7 @@ trait Publications{
         ]);
 
         $article = Publication::find($request['id']);
-        $title = $article->title;
+        $title = $article['title_' . getLangRU_EN('locale_back')];
         $image = basename($article->image_path);
         $status = 'warning';
 
@@ -110,7 +118,7 @@ trait Publications{
 
         return redirect()->route('dashboard.'. str_plural($this->type)  .'.index')->with([
             'status' => $status,
-            'msg' => $this->bold($title) . ' has been deleted'
+            'msg' => html_strong($title) . ' ' . trans('dashboard.state.deleted')
         ]);
     }
 
@@ -125,7 +133,7 @@ trait Publications{
 
         return redirect()->route('dashboard.' . str_plural($this->type) . '.index')->with([
             'status' => 'info',
-            'msg' => $this->bold($article->title) . ' has been ' . ($article->published ? 'published' : 'unpublished')
+            'msg' => html_strong($article['title_' . getLangRU_EN('locale_back')]) .' '. ($article->published ? trans('dashboard.state.published') : trans('dashboard.state.unpublished'))
         ]);
     }
 }

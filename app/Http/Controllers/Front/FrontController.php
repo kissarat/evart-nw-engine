@@ -34,7 +34,7 @@ class FrontController extends Controller
     public function news(){
         $lastNews = Publication::where('published', true)
             ->orderBy('updated_at')
-            ->paginate(3);
+            ->paginate(6);
         return view('public.news')->with([
             'Publications' => $lastNews
         ]);
@@ -43,11 +43,7 @@ class FrontController extends Controller
     public function news_single($id){
         $item = Publication::find($id);
 
-        $view = 'public.publications.publication';
-        if($item->type === 'news')
-            $view = 'public.publications.news';
-
-        return view($view)->with([
+        return view('public.publications.publication')->with([
             'Publication' => $item
         ]);
     }

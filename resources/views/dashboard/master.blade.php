@@ -54,8 +54,8 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     @if (!Auth::guest())
-                        <li {{ Route::currentRouteNamed('dashboard.news.index') ? 'class=active' : '' }}><a href="{{route('dashboard.news.index')}}">News</a></li>
-                        <li {{ Route::currentRouteNamed('dashboard.publications.index') ? 'class=active' : '' }}><a href="{{route('dashboard.publications.index')}}">Publications</a></li>
+                        <li {{ Route::currentRouteNamed('dashboard.news.index') ? 'class=active' : '' }}><a href="{{route('dashboard.news.index')}}">@choice('dashboard.news', 2)</a></li>
+                        <li {{ Route::currentRouteNamed('dashboard.publications.index') ? 'class=active' : '' }}><a href="{{route('dashboard.publications.index')}}">@choice('dashboard.publication', 2)</a></li>
                     @endif
 
                 </ul>
@@ -63,10 +63,22 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
+                    <li><a href="/" target="_blank">Evart</a></li>
                     @if (Auth::guest())
-                        <li><a href="{{ route('login') }}">Login</a></li>
+                        <li><a href="{{ route('login') }}">@lang('dashboard.navigation.login')</a></li>
                         {{--<li><a href="{{ url('/register') }}">Register</a></li>--}}
                     @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{getLangRU_EN('locale_back')}}
+                                <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ route('dashboard.lang', ['lang' => 'en']) }}">En</a></li>
+                                <li><a href="{{ route('dashboard.lang', ['lang' => 'ru']) }}">Ru</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -76,7 +88,7 @@
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Logout
+                                        @lang('dashboard.navigation.logout')
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

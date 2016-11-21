@@ -56,20 +56,20 @@
                             {{ Cookie::get('locale_front') ?? 'en'}}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-left wow fadeInRight" data-wow-duration="400ms" data-wow-delay="0ms">
-                            <li><a href="/lang/en"><abbr>en</abbr><i class="lang lang-en"></i> English</a></li>
-                            <li><a href="/lang/ru"><abbr>ru</abbr><i class="lang lang-ru"></i> Русский</a></li>
-                            <li><a href="#"><abbr>zh</abbr><i class="lang lang-zh"></i> China</a></li>
-                            <li><a href="#"><abbr>de</abbr><i class="lang lang-de"></i> Deutsch</a></li>
-                            <li><a href="#"><abbr>fr</abbr><i class="lang lang-fr"></i> Français</a></li>
-                            <li><a href="#"><abbr>it</abbr><i class="lang lang-it"></i> Italiano</a></li>
-                            <li><a href="#"><abbr>ua</abbr><i class="lang lang-ua"></i> Українська</a></li>
-                            <li><a href="#"><abbr>pl</abbr><i class="lang lang-pl"></i> Polski</a></li>
-                            <li><a href="#"><abbr>es</abbr><i class="lang lang-es"></i> Español</a></li>
-                            <li><a href="#"><abbr>tr</abbr><i class="lang lang-tr"></i> Türkçe</a></li>
-                            <li><a href="#"><abbr>kz</abbr><i class="lang lang-kz"></i> қазақ тілі</a></li>
-                            <li><a href="#"><abbr>pt</abbr><i class="lang lang-pt"></i> Português</a></li>
-                            <li><a href="#"><abbr>az</abbr><i class="lang lang-az"></i> azәrbaycan dili</a></li>
-                            <li><a href="#"><abbr>kg</abbr><i class="lang lang-kg"></i> Кыргызча</a></li>
+                            <li><a href="{{route_lang('en')}}"><abbr>en</abbr><i class="lang lang-en"></i> English</a></li>
+                            <li><a href="{{route_lang('ru')}}"><abbr>ru</abbr><i class="lang lang-ru"></i> Русский</a></li>
+                            <li><a href="{{route_lang('zh')}}"><abbr>zh</abbr><i class="lang lang-zh"></i> China</a></li>
+                            <li><a href="{{route_lang('de')}}"><abbr>de</abbr><i class="lang lang-de"></i> Deutsch</a></li>
+                            <li><a href="{{route_lang('fr')}}"><abbr>fr</abbr><i class="lang lang-fr"></i> Français</a></li>
+                            <li><a href="{{route_lang('it')}}"><abbr>it</abbr><i class="lang lang-it"></i> Italiano</a></li>
+                            <li><a href="{{route_lang('ua')}}"><abbr>ua</abbr><i class="lang lang-ua"></i> Українська</a></li>
+                            <li><a href="{{route_lang('pl')}}"><abbr>pl</abbr><i class="lang lang-pl"></i> Polski</a></li>
+                            <li><a href="{{route_lang('es')}}"><abbr>es</abbr><i class="lang lang-es"></i> Español</a></li>
+                            <li><a href="{{route_lang('tr')}}"><abbr>tr</abbr><i class="lang lang-tr"></i> Türkçe</a></li>
+                            <li><a href="{{route_lang('kz')}}"><abbr>kz</abbr><i class="lang lang-kz"></i> қазақ тілі</a></li>
+                            <li><a href="{{route_lang('pt')}}"><abbr>pt</abbr><i class="lang lang-pt"></i> Português</a></li>
+                            <li><a href="{{route_lang('az')}}"><abbr>az</abbr><i class="lang lang-az"></i> azәrbaycan dili</a></li>
+                            <li><a href="{{route_lang('kg')}}"><abbr>kg</abbr><i class="lang lang-kg"></i> Кыргызча</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="btn"><i class="ico ico-user"></i>@lang('front/navigation.Signin')</a></li>

@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             @php
-                $lang = Cookie::get('locale_front') == 'ru' ? 'ru' : 'en';
+                $lang = getLangRU_EN();
                 $delay = 0;
                 $directions = ['fadeInLeftBig', 'fadeInDown', 'fadeInRightBig'];
                 $position = 0;
@@ -22,7 +22,7 @@
                                     <h3>{{trans('front/news.'.$publication['type'])}}</h3>
                                 </div>
                                 <div class="col-xs-12 overlay">
-                                    <p>{!! mb_strimwidth(strip_tags($publication['article_' . $lang]), 0, 90, '...') !!}</p>
+                                    <p>{!! str_width($publication['title_' . getLangRU_EN()], 100) !!}</p>
                                 </div>
                             </div>
                         </article>

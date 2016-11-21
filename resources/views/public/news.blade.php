@@ -4,5 +4,10 @@
 
 @section('content')
     @include('public.indexPartials.blog', ['mb' => true])
-    {{ $Publications->links() }}
+    <div class="container">
+        <div class="text-center">
+            {{ $Publications->links() }}
+        </div>
+    </div>
+
 @endsection

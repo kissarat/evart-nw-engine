@@ -1,6 +1,5 @@
 <?php
 
-
 function createCase($name, $summ, $list, $month = false){
     $List = [];
     foreach ($list as $item){
@@ -29,4 +28,46 @@ function createCase($name, $summ, $list, $month = false){
         'list' => $List,
         'month' => $month
         ];
+}
+
+function str_width($string, $maxlen){
+    return mb_strimwidth(strip_tags($string), 0, $maxlen, '...');
+}
+
+function getLangRU_EN($name = 'locale_front'){
+    return Cookie::get($name) == 'ru' ? 'ru' : 'en';
+}
+
+function html_strong($text){
+    return '<strong>' . $text .'</strong>';
+}
+
+function setCarbonLocale(){
+    $lang = getLangRU_EN();
+    switch($lang){
+        case "ru":
+            setlocale(LC_TIME, "ru_RU.UTF-8");
+            break;
+        default:
+            setlocale(LC_TIME, "en_US.UTF-8");
+            break;
+    }
+    return $lang;
+}
+
+function dateparse_format($value, $format = '%d %b %Y'){
+    Carbon\Carbon::setLocale(setCarbonLocale());
+    $date = Carbon\Carbon::createFromTimeStamp(strtotime($value));
+
+    return $date->formatLocalized($format);
+}
+
+function dateparse_timeAgo($value){
+    Carbon\Carbon::setLocale(setCarbonLocale());
+    $date = Carbon\Carbon::createFromTimeStamp(strtotime($value));
+    return $date->diffForHumans();
+}
+
+function route_lang($lang){
+    return route('front.lang', ['lang' => $lang]);
 }

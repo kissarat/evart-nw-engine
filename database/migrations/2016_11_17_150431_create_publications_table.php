@@ -18,7 +18,8 @@ class CreatePublicationsTable extends Migration
             $table->enum('type', ['publication', 'news']);
             $table->boolean('published')->default(false);
             $table->string('image_path');
-            $table->text('title');
+            $table->text('title_ru');
+            $table->text('title_en');
             $table->text('keywords');
             $table->mediumText('article_ru');
             $table->mediumText('article_en');
