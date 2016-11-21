@@ -28,7 +28,8 @@ class FrontController extends Controller
             ->shuffle();
 
         return view('public.index')->with([
-            'Publications' => $collection
+            'Publications' => $collection,
+            'Latest' => Publication::where('published', true)->get()->take(2)
         ]);
     }
     public function news(){
@@ -36,7 +37,8 @@ class FrontController extends Controller
             ->orderBy('updated_at')
             ->paginate(6);
         return view('public.news')->with([
-            'Publications' => $lastNews
+            'Publications' => $lastNews,
+            'Latest' => Publication::where('published', true)->get()->take(2)
         ]);
     }
 
@@ -44,7 +46,8 @@ class FrontController extends Controller
         $item = Publication::find($id);
 
         return view('public.publications.publication')->with([
-            'Publication' => $item
+            'Publication' => $item,
+            'Latest' => Publication::where('published', true)->get()->take(2)
         ]);
     }
 }

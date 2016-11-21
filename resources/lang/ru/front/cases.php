@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'choose' => 'ВЫБЕРИ СВОЙ КЕЙС',
+    'findout' => 'Узнать больше',
     'name' => ':name',
     'description' => '€:summ',
     'month' => 'месяц|месяца',

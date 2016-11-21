@@ -3,8 +3,8 @@
     <div class="container">
         <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="title">
-                <h1>Choose Your Case:</h1>
-                <a href="#">Find out more</a>
+                <h1>@lang('front/cases.choose'):</h1>
+                <a href="#">@lang('front/cases.findout')</a>
             </div>
         </div>
         @php

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row text-center">
             <header class="wow fadeInLeftBig {{isset($mb) ? 'white' : false}}" data-wow-duration="600ms" data-wow-delay="200ms">
-                <h1>Read our blog and develop Yourself</h1>
+                <h1>@lang('front/news.title')</h1>
                 <hr>
             </header>
         </div>

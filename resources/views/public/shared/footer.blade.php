@@ -8,28 +8,26 @@
         </div>
         <div class="hidden-xs hidden-sm col-md-6">
             <div class="col-xs-6">
-                <h1>Latest Posts</h1>
+                <h1>@lang('front/footer.latest')</h1>
                 <hr>
             </div>
             <div class="col-xs-12">
-                <article>
-                    <h4>orem ipsum dolor sit amet, consectetur adipisicing elit. Autem dicta, dolore dolores eveniet ex fugit id in inventore ipsum itaque iusto porro quam quasi rem similique sint sit temporibus voluptas?</h4>
-                    <time>10 Sep 2016</time>
-                </article>
-                <article>
-                    <h4>orem ipsum dolor sit amet, consectetur adipisicing elit. Autem dicta, dolore dolores eveniet ex fugit id in inventore ipsum itaque iusto porro quam quasi rem similique sint sit temporibus voluptas?</h4>
-                    <time>10 Sep 2016</time>
-                </article>
+                @foreach($Latest as $post)
+                    <article>
+                        <h4>{{str_width($post['title_'. getLangRU_EN()], 80)}}</h4>
+                        <time>{{dateparse_format($post->updated_at)}}</time>
+                    </article>
+                @endforeach
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="col-xs-12">
-                <h1>Contact us</h1>
+                <h1>@lang('front/footer.contact')</h1>
                 <hr>
             </div>
             <div class="col-xs-12">
                 <div class="contacts">
-                    <p>272 Bath Street, <br>Glassgov, United Kindom <br>
+                    <p>@lang('front/footer.address') <br>
                         Email: <a href="mailto:info@evartnetwork.com">info@evartnetwork.com</a>
                     </p>
                 </div>

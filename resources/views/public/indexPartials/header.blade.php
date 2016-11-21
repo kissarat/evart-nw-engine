@@ -6,11 +6,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="carousel-content">
-                                <h3>The core of our success in three simple sentences:</h3>
-                                <h1>Be smart. Be first. Be cool.</h1>
+                                <h3>@lang('front/header.slider.1.title')</h3>
+                                <h1>@lang('front/header.slider.1.title_description')</h1>
                                 <p class="shadow-text">
-                                    Why Evart Network is so successful? <br>
-                                    <a href="#">Find it Out</a>
+                                    @lang('front/header.slider.1.button_description') <br>
+                                    <a href="#">@lang('front/header.slider.1.button')</a>
                                 </p>
                             </div>
                         </div>
@@ -24,11 +24,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="carousel-content">
-                                <h3>We have for you a revolutionary idea:</h3>
-                                <h1>Bright. Exciting. Inspiring.</h1>
+                                <h3>@lang('front/header.slider.2.title')</h3>
+                                <h1>@lang('front/header.slider.2.title_description')</h1>
                                 <p class="shadow-text">
-                                    How does it make you reach?<br>
-                                    <a href="#">Find it Out</a>
+                                    @lang('front/header.slider.2.button_description') <br>
+                                    <a href="#">@lang('front/header.slider.2.button')</a>
                                 </p>
                             </div>
                         </div>
@@ -42,11 +42,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="carousel-content">
-                                <h3>Your future marketing plan:</h3>
-                                <h1>Brilliant. Simple. Clear.</h1>
+                                <h3>@lang('front/header.slider.3.title')</h3>
+                                <h1>@lang('front/header.slider.3.title_description')</h1>
                                 <p class="shadow-text">
-                                    How to start your career at Evart Network?<br>
-                                    <a href="#">Find it Out</a>
+                                    @lang('front/header.slider.3.button_description') <br>
+                                    <a href="#">@lang('front/header.slider.3.button')</a>
                                 </p>
                             </div>
                         </div>
@@ -60,11 +60,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="carousel-content inverse">
-                                <h3>These cases sale themselves:</h3>
-                                <h1>Fast. Faster. And faster.</h1>
+                                <h3>@lang('front/header.slider.4.title')</h3>
+                                <h1>@lang('front/header.slider.4.title_description')</h1>
                                 <p class="shadow-text">
-                                    How do you earn?<br>
-                                    <a href="#">Find it Out</a>
+                                    @lang('front/header.slider.4.button_description') <br>
+                                    <a href="#">@lang('front/header.slider.4.button')</a>
                                 </p>
                             </div>
                         </div>
@@ -78,11 +78,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="carousel-content">
-                                <h3>OUR TV AND RADIO IN ONE APP</h3>
-                                <h1>EVART MEDIA.</h1>
+                                <h3>@lang('front/header.slider.5.title')</h3>
+                                <h1>@lang('front/header.slider.5.title_description')</h1>
                                 <p class="shadow-text">
-                                    Earn on the watching TV or listening to the radio<br>
-                                    <a href="#">Find it Out</a>
+                                    @lang('front/header.slider.5.button_description') <br>
+                                    <a href="#">@lang('front/header.slider.5.button')</a>
                                 </p>
                             </div>
                         </div>

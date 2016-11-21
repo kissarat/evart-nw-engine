@@ -1,7 +1,7 @@
 <section id="partners" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="500ms">
     <div class="bg"></div>
     <div class="container">
-        <h4>Our Partner Companies</h4>
+        <h4>@lang('front/partners.partners')</h4>
         <div class="owl-carousel owl-theme">
             <div class="item">
                 <div class="one">
