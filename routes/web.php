@@ -64,5 +64,12 @@ Route::group(['namespace' => 'Front', 'middleware' => 'lang.front'], function ()
     Route::get('/', 'FrontController@index')->name('front.index');
     Route::get('/news', 'FrontController@news')->name('front.news');
     Route::get('/news/{id}', 'FrontController@news_single')->name('front.news.single');
+    Route::get('/login/', 'FrontController@login')->name('front.login');
+
+
+    Route::group(['prefix' => 'network'], function () {
+        Route::get('/philosophy', 'FrontController@network_philosophy')->name('front.network.philosophy');
+    });
+
 
 });

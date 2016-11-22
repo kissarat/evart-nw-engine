@@ -1,7 +1,8 @@
-@extends('public.master')
+@extends('public.publications.master')
 
 @section('body-class', 'side-filter--active')
-
+@section('title', $Publication['title_'. getLangRU_EN()])
+@section('keywords', $Publication['keywords'])
 @section('content')
     <section id="{{$Publication['type']}}" class="article">
         <div class="container">

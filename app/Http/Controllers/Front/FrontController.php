@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Front;
 use App\Dashboard\Publication;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Pagination\LengthAwarePaginator;
 
 class FrontController extends Controller
 {
@@ -47,6 +46,24 @@ class FrontController extends Controller
 
         return view('public.publications.publication')->with([
             'Publication' => $item,
+            'Latest' => Publication::where('published', true)->get()->take(2)
+        ]);
+    }
+
+    public function login(){
+        return view('public.login')->with([
+            'Latest' => Publication::where('published', true)->get()->take(2)
+        ]);
+    }
+
+    //Evart Network
+
+    public function network_philosophy(){
+        $path = 'network';
+        $name = 'philosophy';
+        $lang = getLangRU_EN();
+
+        return view_localized($lang, $path, $name)->with([
             'Latest' => Publication::where('published', true)->get()->take(2)
         ]);
     }

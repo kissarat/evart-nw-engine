@@ -1,5 +1,4 @@
 <?php
-
 function createCase($name, $summ, $list, $month = false){
     $List = [];
     foreach ($list as $item){
@@ -70,4 +69,14 @@ function dateparse_timeAgo($value){
 
 function route_lang($lang){
     return route('front.lang', ['lang' => $lang]);
+}
+
+function view_localized($lang, $path, $name, $fallback = 'en'){
+    $view = 'public.articles.' . $lang . '.' . $path . '.' . $name;
+
+    if(!\Illuminate\Support\Facades\View::exists($view)){
+        return view('public.articles.' . $fallback . '.' . $path . '.' . $name);
+    }
+
+    return view($view);
 }

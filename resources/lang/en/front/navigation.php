@@ -6,5 +6,8 @@ return [
     'News' => 'News',
     'About' => 'About Us',
     'Signin' => 'Sign In',
+    'network' => [
+        'philosophy' => 'Success Philosophy',
+    ]
 
 ];

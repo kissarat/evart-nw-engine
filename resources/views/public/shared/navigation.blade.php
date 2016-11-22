@@ -18,7 +18,7 @@
                     <li class="dropdown dropdown-main">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Evart Network</a>
                         <ul class="dropdown-menu dropdown-menu-left">
-                            <li><a href="#">Link</a></li>
+                            <li><a href="{{route('front.network.philosophy')}}">@lang('front/navigation.network.philosophy')</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
@@ -72,7 +72,7 @@
                             <li><a href="{{route_lang('kg')}}"><abbr>kg</abbr><i class="lang lang-kg"></i> Кыргызча</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="btn"><i class="ico ico-user"></i>@lang('front/navigation.Signin')</a></li>
+                    <li><a href="{{route('front.login')}}" class="btn"><i class="ico ico-user"></i>@lang('front/navigation.Signin')</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>

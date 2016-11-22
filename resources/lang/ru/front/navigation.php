@@ -6,5 +6,8 @@ return [
     'News' => 'Новости',
     'About' => 'О нас',
     'Signup' => 'Вход',
+    'network' => [
+        'philosophy' => 'Философия успеха',
+    ]
 
 ];
