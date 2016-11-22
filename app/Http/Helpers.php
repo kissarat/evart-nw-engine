@@ -80,3 +80,7 @@ function view_localized($lang, $path, $name, $fallback = 'en'){
 
     return view($view);
 }
+
+function ewn_lastNews(){
+    return \App\Dashboard\Publication::where('published', true)->get()->take(2);
+}

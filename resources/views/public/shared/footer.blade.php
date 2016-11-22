@@ -12,7 +12,7 @@
                 <hr>
             </div>
             <div class="col-xs-12">
-                @foreach($Latest as $post)
+                @foreach(ewn_lastNews() as $post)
                     <article>
                         <h4>{{str_width($post['title_'. getLangRU_EN()], 80)}}</h4>
                         <time>{{dateparse_format($post->updated_at)}}</time>

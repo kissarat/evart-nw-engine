@@ -4,7 +4,7 @@
     <section id="login">
         <div class="container">
             <div class="header text-center">
-                <h3>The core of our s`uccess in three simple sentences:</h3>
+                <h3>The core of our success in three simple sentences:</h3>
                 <h1>Be smart. Be first. Be cool.</h1>
             </div>
             <div class="row">

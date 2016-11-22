@@ -27,8 +27,7 @@ class FrontController extends Controller
             ->shuffle();
 
         return view('public.index')->with([
-            'Publications' => $collection,
-            'Latest' => Publication::where('published', true)->get()->take(2)
+            'Publications' => $collection
         ]);
     }
     public function news(){
@@ -36,8 +35,7 @@ class FrontController extends Controller
             ->orderBy('updated_at')
             ->paginate(6);
         return view('public.news')->with([
-            'Publications' => $lastNews,
-            'Latest' => Publication::where('published', true)->get()->take(2)
+            'Publications' => $lastNews
         ]);
     }
 
@@ -45,15 +43,12 @@ class FrontController extends Controller
         $item = Publication::find($id);
 
         return view('public.publications.publication')->with([
-            'Publication' => $item,
-            'Latest' => Publication::where('published', true)->get()->take(2)
+            'Publication' => $item
         ]);
     }
 
     public function login(){
-        return view('public.login')->with([
-            'Latest' => Publication::where('published', true)->get()->take(2)
-        ]);
+        return view('public.login');
     }
 
     //Evart Network
@@ -63,8 +58,6 @@ class FrontController extends Controller
         $name = 'philosophy';
         $lang = getLangRU_EN();
 
-        return view_localized($lang, $path, $name)->with([
-            'Latest' => Publication::where('published', true)->get()->take(2)
-        ]);
+        return view_localized($lang, $path, $name);
     }
 }
