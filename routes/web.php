@@ -68,7 +68,16 @@ Route::group(['namespace' => 'Front', 'middleware' => 'lang.front'], function ()
 
 
     Route::group(['prefix' => 'network'], function () {
+        Route::get('/', function(){
+           return redirect()->route('front.network.philosophy');
+        });
         Route::get('/philosophy', 'FrontController@network_philosophy')->name('front.network.philosophy');
+        Route::get('/be-smart-be-first-be-cool', 'FrontController@network_slogan')->name('front.network.slogan');
+        Route::get('/management', 'FrontController@network_management')->name('front.network.management');
+        Route::get('/box', 'FrontController@network_box')->name('front.network.box');
+        Route::get('/global-tv-screen', 'FrontController@network_globalTv')->name('front.network.globaltv');
+        Route::get('/legal-aspects', 'FrontController@network_legalAspects')->name('front.network.legalaspects');
+        Route::get('/regional-representatives', 'FrontController@network_representatives')->name('front.network.representatives');
     });
 
 

@@ -6,6 +6,7 @@ use App\Dashboard\Publication;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
 class FrontController extends Controller
 {
     public function index()
@@ -53,11 +54,50 @@ class FrontController extends Controller
 
     //Evart Network
 
+    protected $path_network = 'network';
+
     public function network_philosophy(){
-        $path = 'network';
         $name = 'philosophy';
         $lang = getLangRU_EN();
 
-        return view_localized($lang, $path, $name);
+        return view_localized($lang, $this->path_network, $name);
+    }
+
+    public function network_slogan(){
+        $name = 'slogan';
+        $lang = getLangRU_EN();
+
+        return view_localized($lang, $this->path_network, $name);
+    }
+
+    public function network_management(){
+        $name = 'management';
+        $lang = getLangRU_EN();
+
+        return view_localized($lang, $this->path_network, $name);
+    }
+    public function network_box(){
+        $name = 'box';
+        $lang = getLangRU_EN();
+
+        return view_localized($lang, $this->path_network, $name);
+    }
+    public function network_globalTv(){
+        $name = 'globaltv';
+        $lang = getLangRU_EN();
+
+        return view_localized($lang, $this->path_network, $name);
+    }
+    public function network_legalAspects(){
+        $name = 'legalaspects';
+        $lang = getLangRU_EN();
+
+        return view_localized($lang, $this->path_network, $name);
+    }
+    public function network_representatives(){
+        $name = 'representatives';
+        $lang = getLangRU_EN();
+
+        return view_localized($lang, $this->path_network, $name);
     }
 }

@@ -10,7 +10,7 @@
             </div>
             <div class="container flex">
 
-                <div class="col-xs-12 col-sm-7 col-md-5">
+                <div class="col-xs-12 col-sm-8 col-md-5">
                     <h1>Философия успеха</h1>
                 </div>
             </div>

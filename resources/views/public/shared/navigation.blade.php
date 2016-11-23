@@ -19,11 +19,12 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Evart Network</a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li><a href="{{route('front.network.philosophy')}}">@lang('front/navigation.network.philosophy')</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
+                            <li><a href="{{route('front.network.slogan')}}">@lang('front/navigation.network.slogan')</a></li>
+                            <li><a href="{{route('front.network.management')}}">@lang('front/navigation.network.management')</a></li>
+                            <li><a href="{{route('front.network.box')}}">@lang('front/navigation.network.box')</a></li>
+                            <li><a href="{{route('front.network.globaltv')}}">@lang('front/navigation.network.globaltv')</a></li>
+                            <li><a href="{{route('front.network.legalaspects')}}">@lang('front/navigation.network.legalaspects')</a></li>
+                            <li><a href="{{route('front.network.representatives')}}">@lang('front/navigation.network.representatives')</a></li>
                         </ul>
                     </li>
                     <li class="dropdown dropdown-main">
