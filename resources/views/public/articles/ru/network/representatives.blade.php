@@ -1,5 +1,6 @@
 @extends('public.articles.article')
 
+@section('path', 'Evart Network')
 @section('article-title', 'Представительства')
 
 @section('content')

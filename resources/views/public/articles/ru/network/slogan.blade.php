@@ -1,5 +1,6 @@
 @extends('public.articles.article')
 
+@section('path', 'Evart Network')
 @section('article-title', 'Be smart. Be first. Be cool.')
 
 @section('content')
@@ -10,7 +11,7 @@
             </div>
             <div class="container flex">
 
-                <div class="col-xs-12 col-sm-10 col-md-6">
+                <div class="col-xs-12 col-sm-10 col-md-7">
                     <h1>Be smart. Be first. Be cool.</h1>
                 </div>
             </div>

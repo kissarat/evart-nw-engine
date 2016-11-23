@@ -12,7 +12,7 @@
                         <a class="navbar-brand" href="/"><img src="/assets_front/img/logo.png" alt="Evart Network"></a>
                     </div>
                     <ul class="nav navbar-nav navbar-left breadcrumbs">
-                        <li><a href="#">Evart Network</a></li>
+                        <li><a href="#">@yield('path')</a></li>
                         <li class="active"><a href="{{URL::to(Route::getCurrentRoute()->getPath())}}">@yield('article-title')</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">

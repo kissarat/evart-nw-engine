@@ -9,6 +9,10 @@ use App\Http\Controllers\Controller;
 
 class FrontController extends Controller
 {
+
+    protected $path_network = 'network';
+    protected $path_career = 'career';
+
     public function index()
     {
         $lastNews = Publication::where('published', true)
@@ -54,50 +58,75 @@ class FrontController extends Controller
 
     //Evart Network
 
-    protected $path_network = 'network';
-
     public function network_philosophy(){
         $name = 'philosophy';
-        $lang = getLangRU_EN();
 
-        return view_localized($lang, $this->path_network, $name);
+        return view_localized($this->path_network, $name);
     }
 
     public function network_slogan(){
         $name = 'slogan';
-        $lang = getLangRU_EN();
 
-        return view_localized($lang, $this->path_network, $name);
+        return view_localized($this->path_network, $name);
     }
 
     public function network_management(){
         $name = 'management';
-        $lang = getLangRU_EN();
 
-        return view_localized($lang, $this->path_network, $name);
+        return view_localized($this->path_network, $name);
     }
     public function network_box(){
         $name = 'box';
-        $lang = getLangRU_EN();
 
-        return view_localized($lang, $this->path_network, $name);
+        return view_localized($this->path_network, $name);
     }
     public function network_globalTv(){
         $name = 'globaltv';
-        $lang = getLangRU_EN();
 
-        return view_localized($lang, $this->path_network, $name);
+        return view_localized($this->path_network, $name);
     }
     public function network_legalAspects(){
         $name = 'legalaspects';
-        $lang = getLangRU_EN();
 
-        return view_localized($lang, $this->path_network, $name);
+        return view_localized($this->path_network, $name);
     }
     public function network_representatives(){
         $name = 'representatives';
-        $lang = getLangRU_EN();
 
-        return view_localized($lang, $this->path_network, $name);
+        return view_localized($this->path_network, $name);
+    }
+
+    //Evart Career
+
+
+    public function career_marketing(){
+        $name = 'marketing';
+
+        return view_localized($this->path_career, $name);
+    }
+
+    /*TODO:Cases*/
+    public function career_cases(){
+        $name = 'marketing';
+
+        return view_localized($this->path_career, $name);
+    }
+
+    public function career_affiliateProgram(){
+        $name = 'affiliateprogram';
+
+        return view_localized($this->path_career, $name);
+    }
+
+    public function career_statuses(){
+        $name = 'statuses';
+
+        return view_localized($this->path_career, $name);
+    }
+
+    public function career_financialSafety(){
+        $name = 'safety';
+
+        return view_localized($this->path_career, $name);
     }
 }

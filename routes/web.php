@@ -80,5 +80,16 @@ Route::group(['namespace' => 'Front', 'middleware' => 'lang.front'], function ()
         Route::get('/regional-representatives', 'FrontController@network_representatives')->name('front.network.representatives');
     });
 
+    Route::group(['prefix' => 'career'], function () {
+        Route::get('/', function(){
+            return redirect()->route('front.network.philosophy');
+        });
+        Route::get('/marketing', 'FrontController@career_marketing')->name('front.career.marketing');
+        Route::get('/buy-case', 'FrontController@career_cases')->name('front.career.cases');
+        Route::get('/affiliate-program', 'FrontController@career_affiliateProgram')->name('front.career.affiliateprogram');
+        Route::get('/statuses', 'FrontController@career_statuses')->name('front.career.statuses');
+        Route::get('/financial-safety', 'FrontController@career_financialSafety')->name('front.career.financialsafety');
+    });
+
 
 });

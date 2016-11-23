@@ -28,14 +28,13 @@
                         </ul>
                     </li>
                     <li class="dropdown dropdown-main">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.Carrier')</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.career.title')</a>
                         <ul class="dropdown-menu dropdown-menu-left">
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
+                            <li><a href="{{route('front.career.marketing')}}">@lang('front/navigation.career.marketing')</a></li>
+                            <li><a href="{{route('front.career.cases')}}">@lang('front/navigation.career.cases')</a></li>
+                            <li><a href="{{route('front.career.affiliateprogram')}}">@lang('front/navigation.career.affiliateprogram')</a></li>
+                            <li><a href="{{route('front.career.statuses')}}">@lang('front/navigation.career.statuses')</a></li>
+                            <li><a href="{{route('front.career.financialsafety')}}">@lang('front/navigation.career.financialsafety')</a></li>
                         </ul>
                     </li>
                     <li {{ Route::currentRouteNamed('front.news') ? 'class=active' : '' }}>

@@ -2,7 +2,6 @@
 
 return [
 
-    'Carrier' => 'Your Carrier at the Evart Network',
     'News' => 'News',
     'About' => 'About Us',
     'Signin' => 'Sign In',
@@ -14,6 +13,14 @@ return [
         'globaltv' => 'Global TV Network',
         'legalaspects' => 'Legal aspects',
         'representatives' => 'Regional Representatives',
+    ],
+    'career' => [
+        'title' => 'Your Carrier at the Evart Network',
+        'marketing' => 'Marketing plan',
+        'cases' => 'Buy case',
+        'affiliateprogram' => 'Affiliate program',
+        'statuses' => 'Statuses',
+        'financialsafety' => 'Financial safety',
     ]
 
 ];

@@ -71,8 +71,8 @@ function route_lang($lang){
     return route('front.lang', ['lang' => $lang]);
 }
 
-function view_localized($lang, $path, $name, $fallback = 'en'){
-    $view = 'public.articles.' . $lang . '.' . $path . '.' . $name;
+function view_localized($path, $name, $fallback = 'en'){
+    $view = 'public.articles.' . getLangRU_EN() . '.' . $path . '.' . $name;
 
     if(!\Illuminate\Support\Facades\View::exists($view)){
         return view('public.articles.' . $fallback . '.' . $path . '.' . $name);
