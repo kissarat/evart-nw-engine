@@ -10,8 +10,21 @@ use App\Http\Controllers\Controller;
 class FrontController extends Controller
 {
 
-    protected $path_network = 'network';
-    protected $path_career = 'career';
+    private $cases;
+    function __construct()
+    {
+        $this->cases = collect([
+            createCase('Econom', 90, '#', ["office", 'count:176']),
+            createCase('Short', 900, '#', ["box", "tv:0", 'count:12']),
+            createCase('Start', 750, '#', ["box", "tv:1", 'count:122']),
+            createCase('Smart', 1500, '#', ["box", "tv:2", 'count:47']),
+            createCase('Business', 4500, '#', ["box", "tv:3", 'count:45']),
+            createCase('Premium ', 9000, '#', ["box", "tv:5", 'count:29']),
+            createCase('VIP', 21000, '/', ["box", "tv:6", 'count:12']),
+            createCase('Pragmatic ', 500, '#', ["box", "tv:1", 'count:200']),
+            createCase('Priority', 1000, '#', ["box", "tv:1", 'count:100']),
+        ]);
+    }
 
     public function index()
     {
@@ -32,7 +45,8 @@ class FrontController extends Controller
             ->shuffle();
 
         return view('public.index')->with([
-            'Publications' => $collection
+            'Publications' => $collection,
+            'cases' => $this->cases
         ]);
     }
     public function news(){
@@ -59,74 +73,51 @@ class FrontController extends Controller
     //Evart Network
 
     public function network_philosophy(){
-        $name = 'philosophy';
-
-        return view_localized($this->path_network, $name);
+        return view('public.articles.network.philosophy');
     }
 
     public function network_slogan(){
-        $name = 'slogan';
-
-        return view_localized($this->path_network, $name);
+        return view('public.articles.network.slogan');
     }
 
     public function network_management(){
-        $name = 'management';
-
-        return view_localized($this->path_network, $name);
+        return view('public.articles.network.management');
     }
     public function network_box(){
-        $name = 'box';
-
-        return view_localized($this->path_network, $name);
+        return view('public.articles.network.box');
     }
     public function network_globalTv(){
-        $name = 'globaltv';
-
-        return view_localized($this->path_network, $name);
+        return view('public.articles.network.globaltv');
     }
     public function network_legalAspects(){
-        $name = 'legalaspects';
-
-        return view_localized($this->path_network, $name);
+        return view('public.articles.network.legalaspects');
     }
     public function network_representatives(){
-        $name = 'representatives';
-
-        return view_localized($this->path_network, $name);
+        return view('public.articles.network.representatives');
     }
 
     //Evart Career
 
 
     public function career_marketing(){
-        $name = 'marketing';
-
-        return view_localized($this->path_career, $name);
+        return view('public.articles.career.marketing');
     }
 
-    /*TODO:Cases*/
     public function career_cases(){
-        $name = 'marketing';
-
-        return view_localized($this->path_career, $name);
+        return view('public.articles.career.cases')->with([
+            'cases' => $this->cases
+        ]);
     }
 
     public function career_affiliateProgram(){
-        $name = 'affiliateprogram';
-
-        return view_localized($this->path_career, $name);
+        return view('public.articles.career.affiliateprogram');
     }
 
     public function career_statuses(){
-        $name = 'statuses';
-
-        return view_localized($this->path_career, $name);
+        return view('public.articles.career.statuses');
     }
 
     public function career_financialSafety(){
-        $name = 'safety';
-
-        return view_localized($this->path_career, $name);
+        return view('public.articles.career.safety');
     }
 }

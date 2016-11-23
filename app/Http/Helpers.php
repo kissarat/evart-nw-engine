@@ -1,5 +1,5 @@
 <?php
-function createCase($name, $summ, $list, $month = false){
+function createCase($name, $summ, $url ,$list, $month = false){
     $List = [];
     foreach ($list as $item){
         if(starts_with(strtolower($item), 'box'))
@@ -25,7 +25,8 @@ function createCase($name, $summ, $list, $month = false){
         'name' => trans('front/cases.name', ['name' => "$name case"]),
         'description' => trans('front/cases.description', ['summ' => $summ]),
         'list' => $List,
-        'month' => $month
+        'month' => $month,
+        'url' => $url
         ];
 }
 
@@ -69,16 +70,6 @@ function dateparse_timeAgo($value){
 
 function route_lang($lang){
     return route('front.lang', ['lang' => $lang]);
-}
-
-function view_localized($path, $name, $fallback = 'en'){
-    $view = 'public.articles.' . getLangRU_EN() . '.' . $path . '.' . $name;
-
-    if(!\Illuminate\Support\Facades\View::exists($view)){
-        return view('public.articles.' . $fallback . '.' . $path . '.' . $name);
-    }
-
-    return view($view);
 }
 
 function ewn_lastNews(){

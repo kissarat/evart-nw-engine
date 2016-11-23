@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'title' => 'Кейсы',
     'choose' => 'ВЫБЕРИ СВОЙ КЕЙС',
     'findout' => 'Узнать больше',
     'name' => ':name',
