@@ -75,3 +75,10 @@ function route_lang($lang){
 function ewn_lastNews(){
     return \App\Dashboard\Publication::where('published', true)->get()->take(2);
 }
+
+function ewn_langList(){
+    $list = collect(glob(resource_path('lang') . '/*' , GLOB_ONLYDIR))->map(function($value){
+        return basename($value);
+    });
+    return $list;
+}
