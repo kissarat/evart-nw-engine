@@ -10,10 +10,8 @@ use App\Http\Controllers\Controller;
 class FrontController extends Controller
 {
 
-    private $cases;
-    function __construct()
-    {
-        $this->cases = collect([
+    private function generateCases(){
+        return collect([
             createCase('Econom', 90, '#', ["office", 'count:176']),
             createCase('Short', 900, '#', ["box", "tv:0", 'count:12']),
             createCase('Start', 750, '#', ["box", "tv:1", 'count:122']),
@@ -46,7 +44,7 @@ class FrontController extends Controller
 
         return view('public.index')->with([
             'Publications' => $collection,
-            'cases' => $this->cases
+            'cases' => $this->generateCases()
         ]);
     }
     public function news(){
@@ -105,7 +103,7 @@ class FrontController extends Controller
 
     public function career_cases(){
         return view('public.articles.career.cases')->with([
-            'cases' => $this->cases
+            'cases' => $this->generateCases()
         ]);
     }
 
