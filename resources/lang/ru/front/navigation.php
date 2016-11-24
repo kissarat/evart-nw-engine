@@ -2,26 +2,26 @@
 
 return [
 
-    'News' => 'News',
+    'News' => 'Новости',
     'About' => 'About Us',
     'Signin' => 'Sign In',
     'network' => [
         'title' => 'Evart Network',
-        'philosophy' => 'Success Philosophy',
+        'philosophy' => 'Философия успеха',
         'slogan' => 'Be smart. Be first. Be cool.',
-        'management' => 'Management',
+        'management' => 'Руководство',
         'box' => 'Evart Box',
-        'globaltv' => 'Global TV Network',
-        'legalaspects' => 'Legal aspects',
-        'representatives' => 'Regional Representatives',
+        'globaltv' => 'Всемирная сеть TV-экранов',
+        'legalaspects' => 'Юридические аспекты',
+        'representatives' => 'Представительства',
     ],
     'career' => [
-        'title' => 'Your Carrier at the Evart Network',
-        'marketing' => 'Marketing plan',
-        'cases' => 'Buy case',
-        'affiliateprogram' => 'Affiliate program',
-        'statuses' => 'Statuses',
-        'financialsafety' => 'Financial safety',
+        'title' => 'Твоя карьера в Evart Network',
+        'marketing' => 'Гениальный маркетинговый план',
+        'cases' => 'Купить кейс',
+        'affiliateprogram' => 'Партнерская программа',
+        'statuses' => 'Статусы',
+        'financialsafety' => 'Финансовая безопасность',
     ]
 
 ];
