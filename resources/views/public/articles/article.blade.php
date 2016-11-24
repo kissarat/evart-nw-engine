@@ -20,10 +20,10 @@
         <div class="container">
             <div class="col-xs-12">
                 <span>Share</span>
-                <a href="#"><i class="icon icon-facebook"></i></a>
-                <a href="#"><i class="icon icon-twitter"></i></a>
+                <a href="javascript:void(0);"><i class="icon icon-facebook"></i></a>
+                <a href="javascript:void(0);"><i class="icon icon-twitter"></i></a>
                 <a href="javascript:void(0);"
-                   onClick="window.open('http://vk.com/share.php?url={{URL::to(Route::getCurrentRoute()->getPath())}}','Share on VK',width=100,height=100);">
+                   onClick="window.open('http://vk.com/share.php?url={{URL::current()}}','Share on VK',width=100,height=100);">
                     <i class="icon icon-vk"></i>
                 </a>
             </div>
@@ -43,12 +43,13 @@
                     </div>
                     <ul class="nav navbar-nav navbar-left breadcrumbs">
                         <li><a href="#">@yield('path')</a></li>
-                        <li class="active"><a href="{{URL::to(Route::getCurrentRoute()->getPath())}}">@yield('article-title')</a></li>
+                        <li class="active"><a href="{{URL::current()}}">@yield('article-title')</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><i class="icon icon-facebook"></i></a></li>
-                        <li><a href="#"><i class="icon icon-twitter"></i></a></li>
-                        <li><a href="#"><i class="icon icon-vk"></i></a></li>
+                        <li><a href="javascript:void(0);"><i class="icon icon-facebook"></i></a></li>
+                        <li><a href="javascript:void(0);"><i class="icon icon-twitter"></i></a></li>
+                        <li><a href="javascript:void(0);"
+                               onClick="window.open('http://vk.com/share.php?url={{URL::current()}}','Share on VK',width=100,height=100);"><i class="icon icon-vk"></i></a></li>
                     </ul>
                 </div>
             </div>

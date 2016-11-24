@@ -3,7 +3,10 @@
 return [
 
     'News' => 'News',
-    'About' => 'About Us',
+    'questions' => [
+        'title' => 'Questions fréquemment posées',
+        'contacts' => 'Contacts'
+    ],
     'Signin' => 'Sign In',
     'network' => [
         'title' => 'Evart Network',

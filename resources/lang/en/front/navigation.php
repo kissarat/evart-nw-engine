@@ -3,7 +3,7 @@
 return [
 
     'News' => 'News',
-    'About' => 'About Us',
+    'questions' => 'Q/A',
     'Signin' => 'Sign In',
     'network' => [
         'philosophy' => 'Success Philosophy',

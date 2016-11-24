@@ -1,4 +1,4 @@
-<section id="navigation" class="container-fluid wow fadeIn" data-wow-duration="500ms" data-wow-delay="0ms">
+<section id="navigation" class="container-fluid">
     <div class="container">
         <nav class="navbar" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,14 +41,9 @@
                         <a href="{{route('front.news')}}">@lang('front/navigation.News')</a>
                     </li>
                     <li class="dropdown dropdown-main">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.About')</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@lang('front/navigation.questions.title')</a>
                         <ul class="dropdown-menu dropdown-menu-left">
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
+                            <li><a href="#">@lang('front/navigation.questions.contacts')</a></li>
                         </ul>
                     </li>
                     <li class="dropdown dropdown-lang">

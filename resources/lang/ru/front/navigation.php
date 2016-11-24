@@ -3,8 +3,11 @@
 return [
 
     'News' => 'Новости',
-    'About' => 'About Us',
-    'Signin' => 'Sign In',
+    'questions' => [
+        'title' => 'Часто задаваемые вопросы',
+        'contacts' => 'Контакты'
+    ],
+    'Signin' => 'Вход',
     'network' => [
         'title' => 'Evart Network',
         'philosophy' => 'Философия успеха',
