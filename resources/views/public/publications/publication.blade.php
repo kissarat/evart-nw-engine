@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <span>Share</span>
-                        <<a href="http://www.facebook.com/sharer/sharer.php?u={{URL::current()}}" target="_blank"><i class="icon icon-facebook"></i></a>
+                        <a href="http://www.facebook.com/sharer/sharer.php?u={{URL::current()}}" target="_blank"><i class="icon icon-facebook"></i></a>
                         <a href="javascript:void(0);"><i class="icon icon-twitter"></i></a>
                         <a href="http://vk.com/share.php?url={{URL::current()}}" target="_blank"><i class="icon icon-vk"></i></a>
                     </div>
