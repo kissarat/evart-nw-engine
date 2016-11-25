@@ -2,7 +2,7 @@
 
 return [
 
-    'News' => 'News',
+    'News' => 'Aktualności',
     'questions' => [
         'title' => 'Najczęściej zadawane pytania',
         'contacts' => 'Kontakty'

@@ -2,7 +2,7 @@
 
 return [
 
-    'News' => 'News',
+    'News' => 'Notizie',
     'questions' => [
         'title' => 'Domande frequenti',
         'contacts' => 'Contatti'

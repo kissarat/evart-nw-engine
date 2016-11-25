@@ -2,7 +2,7 @@
 
 return [
 
-    'News' => 'News',
+    'News' => 'Hírek',
     'questions' => [
         'title' => 'Gyakori kérdések',
         'contacts' => 'Elérhetőségek'

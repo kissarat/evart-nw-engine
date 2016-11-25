@@ -48,7 +48,7 @@
                     </li>
                     <li class="dropdown dropdown-lang">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            {{ Cookie::get('locale_front') ?? 'en'}}
+                            {{ Cookie::get('locale_front') ?? config('app.fallback_locale')}}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-left wow fadeInRight" data-wow-duration="400ms" data-wow-delay="0ms">
                             {{--<li><a href="{{route_lang('en')}}"><abbr>en</abbr><i class="lang lang-en"></i> English</a></li>--}}
