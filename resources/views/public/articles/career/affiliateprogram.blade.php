@@ -2,7 +2,9 @@
 
 @section('article-title', trans('front/career/affiliateprogram.title'))
 @section('path', trans('front/navigation.career.title'))
-@section('image-url', '/assets_front/img/slider/1.jpg')
+@section('image-url', asset('assets_front/img/slider/1.jpg'))
+@section('og.image', asset('assets_front/img/slider/1.jpg'))
+@section('og.description', trans('front/career/affiliateprogram.content.header') ?? trans('front/career/affiliateprogram.content.article.1'))
 
 @section('article')
     <div class="row">

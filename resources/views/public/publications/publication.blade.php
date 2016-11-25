@@ -1,8 +1,12 @@
-@extends('public.publications.master')
+@extends('public.master')
 
 @section('body-class', 'side-filter--active')
-@section('title', $Publication['title_'. getLangRU_EN()])
+@section('article.title', $Publication['title_'. getLangRU_EN()])
 @section('keywords', $Publication['keywords'])
+
+@section('og.image', asset($Publication['image_path']))
+@section('og.description', $Publication['title_'. getLangRU_EN()])
+
 @section('content')
     <section id="{{$Publication['type']}}" class="article">
         <div class="container">
@@ -35,7 +39,7 @@
                         <span>Share</span>
                         <a href="javascript:void(0);"><i class="icon icon-facebook"></i></a>
                         <a href="javascript:void(0);"><i class="icon icon-twitter"></i></a>
-                        <a href="javascript:void(0);" onClick="window.open('http://vk.com/share.php?url={{URL::current()}}','Share on VK',width=100,height=100);"><i class="icon icon-vk"></i></a>
+                        <a href="http://vk.com/share.php?url={{URL::current()}}" target="_blank"><i class="icon icon-vk"></i></a>
                     </div>
                 </div>
             </div>
@@ -59,8 +63,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="javascript:void(0);"><i class="icon icon-facebook"></i></a></li>
                         <li><a href="javascript:void(0);"><i class="icon icon-twitter"></i></a></li>
-                        <li><a href="javascript:void(0);"
-                               onClick="window.open('http://vk.com/share.php?url={{URL::current()}}','Share on VK',width=100,height=100);"><i class="icon icon-vk"></i></a></li>
+                        <li><a href="http://vk.com/share.php?url={{URL::current()}}" target="_blank"><i class="icon icon-vk"></i></a></li>
                     </ul>
                 </div>
             </div>

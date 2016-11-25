@@ -2,7 +2,10 @@
 
 @section('article-title', trans('front/network/philosophy.title'))
 @section('path', trans('front/navigation.network.title'))
-@section('image-url', '/assets_front/img/slider/1.jpg')
+@section('image-url', asset('assets_front/img/slider/1.jpg'))
+@section('og.image', asset('assets_front/img/slider/1.jpg'))
+@section('og.description', trans('front/network/philosophy.content.header') ?? trans('front/network/philosophy.content.article.1'))
+
 
 @section('article')
     <div class="row">

@@ -60,9 +60,9 @@
                             {{--<li><a href="{{route_lang('ua')}}"><abbr>ua</abbr><i class="lang lang-ua"></i> Українська</a></li>--}}
                             <li><a href="{{route_lang('pl')}}"><abbr>pl</abbr><i class="lang lang-pl"></i> Polski</a></li>
                             <li><a href="{{route_lang('hu')}}"><abbr>hu</abbr><i class="lang lang-hu"></i> Magyar</a></li>
-                            {{--<li><a href="{{route_lang('tr')}}"><abbr>tr</abbr><i class="lang lang-tr"></i> Türkçe</a></li>--}}
+                            <li><a href="{{route_lang('tr')}}"><abbr>tr</abbr><i class="lang lang-tr"></i> Türkçe</a></li>
                             {{--<li><a href="{{route_lang('kz')}}"><abbr>kz</abbr><i class="lang lang-kz"></i> қазақ тілі</a></li>--}}
-                            {{--<li><a href="{{route_lang('pt')}}"><abbr>pt</abbr><i class="lang lang-pt"></i> Português</a></li>--}}
+                            <li><a href="{{route_lang('pt')}}"><abbr>pt</abbr><i class="lang lang-pt"></i> Português</a></li>
                             {{--<li><a href="{{route_lang('az')}}"><abbr>az</abbr><i class="lang lang-az"></i> azәrbaycan dili</a></li>--}}
                             {{--<li><a href="{{route_lang('kg')}}"><abbr>kg</abbr><i class="lang lang-kg"></i> Кыргызча</a></li>--}}
                         </ul>

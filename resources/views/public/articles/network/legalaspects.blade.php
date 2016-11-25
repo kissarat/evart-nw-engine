@@ -2,7 +2,9 @@
 
 @section('article-title', trans('front/network/legalaspects.title'))
 @section('path', trans('front/navigation.network.title'))
-@section('image-url', '/assets_front/img/slider/1.jpg')
+@section('image-url', asset('assets_front/img/slider/1.jpg'))
+@section('og.image', asset('assets_front/img/slider/1.jpg'))
+@section('og.description', trans('front/network/legalaspects.content.header') ?? trans('front/network/legalaspects.content.article.1'))
 
 @section('article')
     <div class="row">

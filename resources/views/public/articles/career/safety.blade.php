@@ -2,7 +2,9 @@
 
 @section('article-title', trans('front/career/safety.title'))
 @section('path', trans('front/navigation.career.title'))
-@section('image-url', '/assets_front/img/slider/1.jpg')')
+@section('image-url', asset('assets_front/img/slider/1.jpg'))
+@section('og.image', asset('assets_front/img/slider/1.jpg'))
+@section('og.description', trans('front/career/safety.content.header') ?? trans('front/career/safety.content.article.1'))
 
 @section('article')
     <div class="col-xs-12">

@@ -2,6 +2,8 @@
 
 @section('body-class', 'side-filter--active')
 
+@section('og.title')@yield('article-title')@endsection
+
 @section('content')
 <section id="article" class="article">
     <header>
@@ -22,10 +24,7 @@
                 <span>Share</span>
                 <a href="javascript:void(0);"><i class="icon icon-facebook"></i></a>
                 <a href="javascript:void(0);"><i class="icon icon-twitter"></i></a>
-                <a href="javascript:void(0);"
-                   onClick="window.open('http://vk.com/share.php?url={{URL::current()}}','Share on VK',width=100,height=100);">
-                    <i class="icon icon-vk"></i>
-                </a>
+                <a href="http://vk.com/share.php?url={{URL::current()}}" target="_blank"><i class="icon icon-vk"></i></a>
             </div>
         </div>
     </footer>
@@ -48,8 +47,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="javascript:void(0);"><i class="icon icon-facebook"></i></a></li>
                         <li><a href="javascript:void(0);"><i class="icon icon-twitter"></i></a></li>
-                        <li><a href="javascript:void(0);"
-                               onClick="window.open('http://vk.com/share.php?url={{URL::current()}}','Share on VK',width=100,height=100);"><i class="icon icon-vk"></i></a></li>
+                        <li><a href="http://vk.com/share.php?url={{URL::current()}}" target="_blank"><i class="icon icon-vk"></i></a></li>
                     </ul>
                 </div>
             </div>
