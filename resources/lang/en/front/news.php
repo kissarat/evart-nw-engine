@@ -5,6 +5,6 @@ return [
     'publication' => 'publication',
     'news' => 'news',
     'published' => 'Published',
-    'by' => 'By',
+    'by' => 'By', //Published By Alexander
 
 ];

@@ -9,6 +9,7 @@ return [
     ],
     'Signin' => 'Sign In',
     'network' => [
+        'title' => 'Evart Network',
         'philosophy' => 'Success Philosophy',
         'slogan' => 'Be smart. Be first. Be cool.',
         'management' => 'Management',

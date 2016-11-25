@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'title' => 'Cases',
     'choose' => 'CHOOSE YOUR CASE',
     'findout' => 'Find out more',
     'name' => ':name',
