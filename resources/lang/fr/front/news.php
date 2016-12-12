@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'title' => 'Читайте наш блог и развивайте себя',
-    'publication' => 'публикация',
-    'news' => 'новость',
-    'published' => 'Опубликовано',
-    'by' => '',
+    'title' => 'Read our blog and develop Yourself',
+    'publication' => 'publication',
+    'news' => 'news',
+    'published' => 'Published',
+    'by' => 'By', //Published By Alexander
 
 ];

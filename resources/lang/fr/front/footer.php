@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'latest' => 'Последние публикации',
-    'contact' => 'Контакты',
-    'address' => '272 Банная улица, <br> Глазгоу, Великобритания',
+    'latest' => 'Latest Posts',
+    'contact' => 'Contact us',
+    'address' => '272 Bath Street, <br> Glassgov, United Kindom',
 ];

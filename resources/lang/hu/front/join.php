@@ -1,20 +1,20 @@
 <?php
 
 return [
-    'facts' => 'Некоторые факты о компании',
+    'facts' => 'Some facts about the company',
     'numbers' => [
-        'countries' => 'СТРАН',
-        'offices' => 'ИНТУИТИВНЫХ ОФИССОВ',
-        'projects' => 'ОФИЦИАЛЬНЫХ ПРОЕКТОВ',
-        'partners' => 'ПАРТНЕРОВ',
+        'countries' => 'COUNTRIES',
+        'offices' => 'PRESENTATIVE OFFICES',
+        'projects' => 'OFFICIAL PROJECTS',
+        'partners' => 'PARTNERS',
     ],
-    'join' => 'ПРИСОЕДЕНЯЙСЯ К EVART NETWORK СЕЙЧАС',
-    'join_description' => 'Один маленький клик приведет вас к огромным изменениям.',
-    'sign' => 'ПОДПИСАТЬСЯ',
+    'join' => 'JOIN EVART NETWORK COMPANY NOW',
+    'join_description' => 'One little click will lead You to huge changes.',
+    'sign' => 'SIGN UP',
     'presentation' => [
-        'welcome' => 'Добро пожаловать в Evart Network',
-        'welcome_description' => '"Для того, чтобы начать новую работу, вы должны остановить старый." Прекратите делать вещи, которые истощают Вас',
-        'download' => 'Загрузить презентацию'
+        'welcome' => 'Welcome to Evart Network',
+        'welcome_description' => '"To begin a new work you have to stop the old one." Stop doing things that debilitate You',
+        'download' => 'Download the presentation'
     ]
 
 ];

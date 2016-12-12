@@ -29,7 +29,7 @@
                                 </form>
                             </div>
                             <footer>
-                                <p>Forgot your password?</p>
+                                <a href="#">Forgot your password?</a>
                             </footer>
                         </div>
                     </div>

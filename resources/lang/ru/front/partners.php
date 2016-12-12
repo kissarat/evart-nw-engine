@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'partners' => 'Наши Партнеры',
+    'partners' => 'НАШИ ФИЛИАЛЫ',
 
 ];

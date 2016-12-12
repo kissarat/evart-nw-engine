@@ -1,7 +1,7 @@
 <section id="footer" class="wow fadeIn" data-wow-duration="400ms" data-wow-delay="0ms">
     <div class="container">
         <div class="col-xs-12 col-sm-6 col-md-3 text-right">
-            <a class="brand" href="#">
+            <a class="brand" href="/">
                 <img src="/assets_front/img/logo-big.png" alt="Evart-Network">
             </a>
             <p>Be smart. Be first. Be cool.</p>
